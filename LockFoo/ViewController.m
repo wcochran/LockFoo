@@ -12,7 +12,6 @@
 
 @interface ViewController () <LoginDelegate>
 
-@property (assign, nonatomic) BOOL viewHasAppeared;
 @property (assign, nonatomic) BOOL presentingLoginController;
 
 -(void) applicationDidBecomeActive:(NSNotification*) notification;
@@ -25,7 +24,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"ViewControll:viewDidLoad");
-    self.viewHasAppeared = NO;
     self.presentingLoginController = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
@@ -58,7 +56,6 @@
 -(void)viewDidAppear:(BOOL)animated {
     NSLog(@"ViewController:ViewDidAppear:");
     [super viewDidAppear:animated];
-    self.viewHasAppeared = YES;
     [self loginIfNecessary];
 }
 
@@ -68,9 +65,7 @@
 
 -(void) applicationDidBecomeActive:(NSNotification*) notification {
     NSLog(@"ViewController:applicationDidBecomeActive:");
-    //XXX if (self.viewHasAppeared) {  // avoid login before view has appeared (handled by viewDidAppear in this case).
-        [self loginIfNecessary];
-    //XXX}
+    [self loginIfNecessary];
 }
 
 - (void)didReceiveMemoryWarning {
