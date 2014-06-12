@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5512A55D19478C1D005EFA2A /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5512A55C19478C1D005EFA2A /* LoginTableViewController.m */; };
 		5512A56019478FEF005EFA2A /* AnotherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5512A55F19478FEF005EFA2A /* AnotherViewController.m */; };
+		5512A563194A1E60005EFA2A /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5512A562194A1E60005EFA2A /* RootNavigationController.m */; };
 		554D1F02194777FB008C6A57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 554D1F01194777FB008C6A57 /* main.m */; };
 		554D1F05194777FB008C6A57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 554D1F04194777FB008C6A57 /* AppDelegate.m */; };
 		554D1F08194777FB008C6A57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554D1F07194777FB008C6A57 /* ViewController.m */; };
@@ -32,6 +33,8 @@
 		5512A55C19478C1D005EFA2A /* LoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
 		5512A55E19478FEF005EFA2A /* AnotherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherViewController.h; sourceTree = "<group>"; };
 		5512A55F19478FEF005EFA2A /* AnotherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherViewController.m; sourceTree = "<group>"; };
+		5512A561194A1E60005EFA2A /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		5512A562194A1E60005EFA2A /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		554D1EFC194777FB008C6A57 /* LockFoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockFoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		554D1F00194777FB008C6A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		554D1F01194777FB008C6A57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 			children = (
 				554D1F03194777FB008C6A57 /* AppDelegate.h */,
 				554D1F04194777FB008C6A57 /* AppDelegate.m */,
+				5512A561194A1E60005EFA2A /* RootNavigationController.h */,
+				5512A562194A1E60005EFA2A /* RootNavigationController.m */,
 				554D1F06194777FB008C6A57 /* ViewController.h */,
 				554D1F07194777FB008C6A57 /* ViewController.m */,
 				5512A55B19478C1D005EFA2A /* LoginTableViewController.h */,
@@ -226,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				554D1F08194777FB008C6A57 /* ViewController.m in Sources */,
+				5512A563194A1E60005EFA2A /* RootNavigationController.m in Sources */,
 				5512A56019478FEF005EFA2A /* AnotherViewController.m in Sources */,
 				5512A55D19478C1D005EFA2A /* LoginTableViewController.m in Sources */,
 				554D1F05194777FB008C6A57 /* AppDelegate.m in Sources */,

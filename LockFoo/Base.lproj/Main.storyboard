@@ -38,9 +38,6 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main View" id="2Ug-Jr-UEN"/>
-                    <connections>
-                        <segue destination="epO-ub-75B" kind="presentation" identifier="RootLoginSegue" modalTransitionStyle="coverVertical" id="YW1-GI-hIJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="1662" y="1011"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Root Navigation Controller-->
         <scene sceneID="xv4-Gm-qMd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tj4-yu-oH8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tj4-yu-oH8" customClass="RootNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N2H-Jg-HpD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -213,6 +210,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="hnw-vM-0qO"/>
+                        <segue destination="epO-ub-75B" kind="presentation" identifier="RootLoginSegue" animates="NO" id="WPW-7H-ju0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jq-Ax-h3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -235,7 +233,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12V-dl-K4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="1011"/>
+            <point key="canvasLocation" x="1031" y="1011"/>
         </scene>
     </scenes>
 </document>
