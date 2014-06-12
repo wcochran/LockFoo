@@ -8,7 +8,6 @@
 
 #import "RootNavigationController.h"
 #import "LoginTableViewController.h"
-//#import "AppDelegate.h"
 
 @interface RootNavigationController () <LoginDelegate>
 @property (assign, nonatomic) BOOL userLoggedIn;
@@ -59,7 +58,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    NSLog(@"VRootNavigationController:ViewDidAppear:");
+    NSLog(@"RootNavigationController:ViewDidAppear:");
     [super viewDidAppear:animated];
     [self loginIfNecessary];
 }
@@ -78,8 +77,8 @@
     const NSTimeInterval maxBackgroundTime = 15.0;
     if (!self.backgroundTime || [[NSDate date] timeIntervalSinceDate:self.backgroundTime] > maxBackgroundTime) {
         self.userLoggedIn = NO;
+        [self loginIfNecessary];
     }
-    [self loginIfNecessary];
 }
 
 @end
