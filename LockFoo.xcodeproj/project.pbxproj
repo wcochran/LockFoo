@@ -29,6 +29,13 @@
 			remoteGlobalIDString = 554D1EFB194777FB008C6A57;
 			remoteInfo = LockFoo;
 		};
+		5512A56C194A5DEE005EFA2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 554D1EF4194777FB008C6A57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 554D1EFB194777FB008C6A57;
+			remoteInfo = LockFoo;
+		};
 		554D1F13194777FB008C6A57 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 554D1EF4194777FB008C6A57 /* Project object */;
@@ -180,6 +187,7 @@
 			dependencies = (
 				554D1F14194777FB008C6A57 /* PBXTargetDependency */,
 				5512A56B194A5DEE005EFA2A /* PBXTargetDependency */,
+				5512A56D194A5DEE005EFA2A /* PBXTargetDependency */,
 			);
 			name = LockFooTests;
 			productName = LockFooTests;
@@ -275,6 +283,11 @@
 			target = 554D1EFB194777FB008C6A57 /* LockFoo */;
 			targetProxy = 5512A56A194A5DEE005EFA2A /* PBXContainerItemProxy */;
 		};
+		5512A56D194A5DEE005EFA2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 554D1EFB194777FB008C6A57 /* LockFoo */;
+			targetProxy = 5512A56C194A5DEE005EFA2A /* PBXContainerItemProxy */;
+		};
 		554D1F14194777FB008C6A57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 554D1EFB194777FB008C6A57 /* LockFoo */;
@@ -365,6 +378,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				METAL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
