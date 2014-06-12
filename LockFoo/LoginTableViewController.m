@@ -31,13 +31,15 @@
     NSLog(@"login: username=%@, password=%@", username, password);
     
     if ([username isEqualToString:@"foo"] && [password isEqualToString:@"bar"]) {
-        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        appDelegate.userLoggedIn = YES;
-        [self dismissViewControllerAnimated:YES completion:^{
-            if ([self.loginDelegate respondsToSelector:@selector(didLogin)]) {
-                [self.loginDelegate didLogin];
-            }
-        }];
+//        [self dismissViewControllerAnimated:YES completion:^{
+//            if ([self.loginDelegate respondsToSelector:@selector(didLogin)]) {
+//                [self.loginDelegate didLogin];
+//            }
+//        }];
+        if ([self.loginDelegate respondsToSelector:@selector(didLogin)]) {
+            [self.loginDelegate didLogin];
+        }
+        [self dismissViewControllerAnimated:YES completion:^{}];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Bogus User/Password"
                                                         message:@"Username and/or password incorrect"

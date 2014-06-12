@@ -14,8 +14,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (assign, nonatomic) BOOL userLoggedIn;
-@property (strong, nonatomic) NSDate *enteredBackgroundTimeStamp;
+//@property (assign, nonatomic) BOOL userLoggedIn;
+//@property (strong, nonatomic) NSDate *backgroundTime;
 
 @end
 
