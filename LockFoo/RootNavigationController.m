@@ -13,8 +13,10 @@
 @property (assign, nonatomic) BOOL userLoggedIn;
 @property (strong, nonatomic) NSDate *backgroundTime;
 @property (assign, nonatomic) BOOL presentingLoginController;
+//XXX @property (strong, nonatomic) UIImageView *lockImageView;
 -(void)applicationDidBecomeActive:(NSNotification*) notification;
--(void)applicationDidEnterBackground:(NSNotification*) notification;
+// XXX -(void)applicationDidEnterBackground:(NSNotification*) notification;
+-(void)applicationWillResignActive:(NSNotification*) notification;
 @end
 
 @implementation RootNavigationController
@@ -26,10 +28,15 @@
                                              selector:@selector(applicationDidBecomeActive:)
                                                  name:UIApplicationDidBecomeActiveNotification
                                                object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(applicationDidEnterBackground:)
+//                                                 name:UIApplicationDidEnterBackgroundNotification
+//                                               object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(applicationDidEnterBackground:)
-                                                 name:UIApplicationDidEnterBackgroundNotification
+                                             selector:@selector(applicationWillResignActive:)
+                                                 name:UIApplicationWillResignActiveNotification
                                                object:nil];
+
 }
 
 -(void)dealloc {
@@ -67,13 +74,26 @@
     NSLog(@"RootNavigationController:viewWillDisappear:");
 }
 
--(void)applicationDidEnterBackground:(NSNotification*) notification {
-    NSLog(@"RootNavigationController:applicationDidEnterBackground:");
+//-(void)applicationDidEnterBackground:(NSNotification*) notification {
+//    NSLog(@"RootNavigationController:applicationDidEnterBackground:");
+//    // XXX self.backgroundTime = [NSDate date];
+//}
+
+-(void)applicationWillResignActive:(NSNotification*) notification {
+    NSLog(@"RootNavigationController:applicationWillResignActive:");
+//    self.lockImageView = [[UIImageView alloc] initWithFrame:self.view.window.frame];
+//    UIImage *lockImage = [UIImage imageNamed:@"Lock"];
+//    self.lockImageView.image = lockImage;
+//    [self.view.window addSubview:self.lockImageView];
     self.backgroundTime = [NSDate date];
 }
 
 -(void) applicationDidBecomeActive:(NSNotification*) notification {
     NSLog(@"ViewController:applicationDidBecomeActive:");
+//    if (self.lockImageView != nil) {
+//        [self.lockImageView removeFromSuperview];
+//        self.lockImageView = nil;
+//    }
     const NSTimeInterval maxBackgroundTime = 15.0;
     if (!self.backgroundTime || [[NSDate date] timeIntervalSinceDate:self.backgroundTime] > maxBackgroundTime) {
         self.userLoggedIn = NO;

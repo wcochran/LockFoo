@@ -65,11 +65,32 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soccer" translatesAutoresizingMaskIntoConstraints="NO" id="4Dg-v6-LwJ">
+                                <rect key="frame" x="187" y="365" width="106" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="7Ah-BN-61v"/>
+                                    <constraint firstAttribute="height" constant="102" id="xjJ-QD-dYX"/>
+                                </constraints>
+                            </imageView>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Soccer Ball" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLp-gc-orE">
+                                <rect key="frame" x="188" y="329" width="104" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FLA-hy-1cP"/>
+                                    <constraint firstAttribute="width" constant="104" id="Gsi-1o-OH1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="8ao-CR-L6U" secondAttribute="centerY" id="UgU-5P-3Xy"/>
+                            <constraint firstAttribute="centerX" secondItem="ZLp-gc-orE" secondAttribute="centerX" id="WQw-Od-pWK"/>
                             <constraint firstAttribute="centerX" secondItem="8ao-CR-L6U" secondAttribute="centerX" id="YHm-cy-eXG"/>
+                            <constraint firstItem="4Dg-v6-LwJ" firstAttribute="top" secondItem="ZLp-gc-orE" secondAttribute="bottom" constant="15" id="eKr-8K-PN1"/>
+                            <constraint firstAttribute="centerX" secondItem="4Dg-v6-LwJ" secondAttribute="centerX" id="gxl-mZ-4In"/>
+                            <constraint firstItem="DZ9-ka-9fZ" firstAttribute="top" secondItem="4Dg-v6-LwJ" secondAttribute="bottom" constant="13" id="mvF-zc-Ox6"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -90,7 +111,7 @@
                         <sections>
                             <tableViewSection id="OxA-Io-fal">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="gLa-W2-SIu">
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="none" indentationWidth="10" id="gLa-W2-SIu">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gLa-W2-SIu" id="tMj-n9-Wq2">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -123,7 +144,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="ATg-uf-wZp">
+                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" selectionStyle="none" indentationWidth="10" id="ATg-uf-wZp">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ATg-uf-wZp" id="Zr1-rZ-WxN">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -155,28 +176,29 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="F5C-KC-bZU">
+                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" ambiguous="YES" selectionStyle="none" indentationWidth="10" id="F5C-KC-bZU">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F5C-KC-bZU" id="8Ha-3h-7Me">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfx-aQ-G23">
-                                                    <rect key="frame" x="221" y="7" width="38" height="30"/>
+                                                    <rect key="frame" x="189" y="5" width="103" height="34"/>
+                                                    <color key="backgroundColor" white="0.70438508060000005" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="38" id="d0E-vX-fu2"/>
-                                                        <constraint firstAttribute="height" constant="30" id="s9b-h6-abl"/>
+                                                        <constraint firstAttribute="height" constant="34" id="0Zg-hQ-SLc"/>
+                                                        <constraint firstAttribute="width" constant="103" id="Cbn-Jx-ZVG"/>
                                                     </constraints>
                                                     <state key="normal" title="Login">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="login:" destination="i0D-Mt-EIH" eventType="touchUpInside" id="JHe-Eq-6zw"/>
+                                                        <action selector="login:" destination="i0D-Mt-EIH" eventType="touchUpInside" id="Pb4-Hy-jBA"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="centerX" secondItem="Jfx-aQ-G23" secondAttribute="centerX" id="3Vg-mD-EjN"/>
-                                                <constraint firstAttribute="centerY" secondItem="Jfx-aQ-G23" secondAttribute="centerY" id="gzb-6D-qFy"/>
+                                                <constraint firstAttribute="centerY" secondItem="Jfx-aQ-G23" secondAttribute="centerY" id="4t4-LK-noH"/>
+                                                <constraint firstAttribute="centerX" secondItem="Jfx-aQ-G23" secondAttribute="centerX" id="7kw-fF-Mdj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -196,7 +218,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMx-mz-Cbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1662" y="1011"/>
+            <point key="canvasLocation" x="1662" y="1008"/>
         </scene>
         <!--Root Navigation Controller-->
         <scene sceneID="xv4-Gm-qMd">
@@ -236,4 +258,7 @@
             <point key="canvasLocation" x="1031" y="1011"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="soccer" width="512" height="512"/>
+    </resources>
 </document>

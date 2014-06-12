@@ -9,7 +9,7 @@
 #import "AnotherViewController.h"
 
 @interface AnotherViewController ()
-
+@property (strong, nonatomic) UIImageView *lockImageView;
 @end
 
 @implementation AnotherViewController
@@ -23,10 +23,27 @@
     return self;
 }
 
+-(void)showHideLock:(id)sender {
+    if (self.lockImageView == nil) {
+//        self.lockImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+//        self.lockImageView.image = [UIImage imageNamed:@"Lock"];
+        UIImage *lockImage = [UIImage imageNamed:@"lock"];
+        NSLog(@"lockImage = %@, size=%@", lockImage, NSStringFromCGSize(lockImage.size));
+        self.lockImageView = [[UIImageView alloc] initWithImage:lockImage];
+        NSLog(@"lockImageView = %@", self.lockImageView);
+        [self.view addSubview:self.lockImageView];
+    } else {
+        [self.lockImageView removeFromSuperview];
+        self.lockImageView = nil;
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Show/Hide Lock" style:UIBarButtonItemStylePlain target:self action:@selector(showHideLock:)];
 }
 
 - (void)didReceiveMemoryWarning
