@@ -11,21 +11,20 @@
 #import "LoginTableViewController.h"
 
 @interface ViewController () <LoginDelegate>
-
 @property (assign, nonatomic) BOOL presentingLoginController;
-
 -(void) applicationDidBecomeActive:(NSNotification*) notification;
-
 @end
 
 @implementation ViewController
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"ViewControll:viewDidLoad");
     self.presentingLoginController = NO;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationDidBecomeActive:)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
 }
 
 -(void)dealloc {
@@ -66,11 +65,6 @@
 -(void) applicationDidBecomeActive:(NSNotification*) notification {
     NSLog(@"ViewController:applicationDidBecomeActive:");
     [self loginIfNecessary];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
